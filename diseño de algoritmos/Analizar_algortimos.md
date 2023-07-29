@@ -4,7 +4,7 @@
 
 
 Analyzing an algorithm has come to mean predicting the resources that the algorithm requires. Occasionally, resources such as memory, communication bandwidth, or computer hardware are of primary concern, but most often it is computational time that we want to measure. Generally, by analyzing several candidate
-algorithms for a problem, a most efficient one can be easily identified. Such analysis may indicate more than one viable candidate, but several inferior algorithms
+algorithms for a problem, a most efficient one can be easily identified. Such analysis may indicate more than one viable candidate, but several inferior algorithms
 are usually discarded in the process.
 
 we will assume generic one proccesor for our studies, **random-access machine (RAM)**  In the RAM model, instructions are executed one after another, with no concurrent operations
@@ -27,7 +27,7 @@ thousand numbers takes longer than sorting three numbers. Moreover, INSERTION SO
 size depending on how nearly sorted they already are.
 
 The best **notion for input size** depends on the problem being studied. For many
-problems, such as sorting or computing discrete Fourier transforms, the most natural measure is the number of items in the input—for example, the array size n
+problems, such as sorting or computing discrete Fourier transforms, the most natural measure is the number of items in the input—for example, the array size n
 for sorting.
 
 The **running time** of an algorithm on a particular input is the number of primitive
