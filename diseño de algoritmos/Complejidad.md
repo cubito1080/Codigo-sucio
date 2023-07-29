@@ -10,9 +10,7 @@ It is sometimes convenient, however, to abuse asymptotic notation in a variety o
 or, alternatively, restricted to a subset of the natural numbers. **It is important**, however, to understand the precise meaning of the notation so that when it is abused, it
 is not misused. This section defines the basic asymptotic notations and also introduces some common abuses.
 
-$$
- \Theta notation
-$$
+## Theta notation
 
 Theta notation (Θ) is used to describe the asymptotic behavior of an algorithm’s running time. It provides a way to define an upper and lower bound on the growth rate of a function, which can be used to describe the performance of an algorithm.
 
