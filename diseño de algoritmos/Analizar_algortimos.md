@@ -57,3 +57,22 @@ the usual way (i.e., due to the test in the loop header), t
 |     A[i+1] = A[i] | c6 | ∑i=2 to n |
 |     i = i - 1 | c7 | ∑i=2 to n |
 |   A[i+1] = key | c8 | n-1 |
+
+
+The **running time of the algorithm is the sum of running times for each statement**
+executed; a statement that takes ci steps to execute and is executed n times will
+contribute cin to the total running time.5 To compute T (n), the running time of
+INSERTION-SORT, we sum the products of the cost and times columns, obtaining:
+
+$$
+T(n) = c_1n + c_2(n-1) + c_3(n-1) + c_4 \sum_{j=2}^{n} \sum_{j=2}^{n} (c_{j-1}) + c_7 \sum_{j=2}^{n} (c_{j-1}) + c_8(n-1)
+$$
+
+
+
+
+
+
+
+
+
