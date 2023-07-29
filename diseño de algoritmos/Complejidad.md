@@ -11,7 +11,7 @@ or, alternatively, restricted to a subset of the natural numbers. **It is import
 is not misused. This section defines the basic asymptotic notations and also introduces some common abuses.
 
 $$
-\Theta notation
+## \Theta notation
 $$
 
 Theta notation (Θ) is used to describe the asymptotic behavior of an algorithm’s running time. It provides a way to define an upper and lower bound on the growth rate of a function, which can be used to describe the performance of an algorithm.
@@ -44,5 +44,12 @@ to indicate that f (n) is a member of (g(n)). Instead, we will usually write
 
 ![Some examples of theta notation in algorithms](assets/alogritmos.PNG)
 
+
+##O-notation
+
+
+The o-notation asymptotically bounds a function from above and below. When
+we have only an asymptotic upper bound, we use O-notation. For a given function g(n), we denote by O(g(n)) (pronounced “big-oh of g of n” or sometimes just
+“oh of g of n”) the set of functions
 
 
