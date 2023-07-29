@@ -1,5 +1,8 @@
 # Asymptotic notation:
 
+*los conceptos descritos aqui, son descritos con un lenguaje bastante tecnico, este video me ayudo mucho*:
+[video para entender: O , theta , omega](https://www.youtube.com/watch?v=A03oI0znAoc)
+
 The notations we use to describe the asymptotic running time of an algorithm
 are defined in terms of functions whose domains are the set of natural numbers
 N = {0, 1, 2,...}. Such notations are convenient for describing the worst-case
