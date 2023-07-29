@@ -45,11 +45,36 @@ to indicate that f (n) is a member of (g(n)). Instead, we will usually write
 ![Some examples of theta notation in algorithms](assets/alogritmos.PNG)
 
 
-##O-notation
+## O-notation
+
+
+Big O notation (O) is used to describe the asymptotic behavior of a function, and is often used in algorithm analysis to describe the worst-case or average-case running time. It provides an upper bound on the growth rate of a function, which can be used to describe the performance of an algorithm.
 
 
 The o-notation asymptotically bounds a function from above and below. When
 we have only an asymptotic upper bound, we use O-notation. For a given function g(n), we denote by O(g(n)) (pronounced “big-oh of g of n” or sometimes just
 “oh of g of n”) the set of functions
+
+We use O-notation to give an upper bound on a function, to within a constant
+factor. Figure 3.1(b) shows the intuition behind O-notation. For all values n to the
+right of n0, the value of the function f (n) is on or below g(n)
+
+We write f (n) = O(g(n)) to indicate that a function f (n) is a member of
+the set O(g(n)). Note that f (n) = (g(n)) implies f (n) = O(g(n)), since theta-
+notation is a stronger notion than O-notation.
+
+
+
+## Omega notation
+
+Omega notation (Ω) is used to describe the asymptotic behavior of a function, and is often used in algorithm analysis to describe the best-case running time. It provides a lower bound on the growth rate of a function, which can be used to describe the performance of an algorithm.
+
+In formal terms, a function f(n) is said to be Ω(g(n)) if there exist positive constants c and n0 such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0. This means that the function f(n) is bounded below by the function g(n) multiplied by a constant for sufficiently large values of n
+
+$$
+f(n) = \Omega(g(n)) \text{ if there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \leq cg(n) \leq f(n) \text{ for all } n \geq n_0.
+$$
+
+
 
 
