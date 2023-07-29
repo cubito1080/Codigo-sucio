@@ -13,3 +13,17 @@ is not misused. This section defines the basic asymptotic notations and also int
 $$
 \Theta notation
 $$
+ we found that the worst-case running time of insertion sort is
+T (n) = (n2). Let us define what this notation means. For a given function g(n),
+we denote by (g(n)) the set of function
+
+$$
+\Theta(g(n)) = f(n) \text{ if there exist positive constants } c_1, c_2, \text{ and } n_0 \text{ such that } 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \text{ for all } n \geq n_0.
+$$
+
+
+
+f (n) belongs to the set (g(n)) if there exist positive constants c1
+and c2 such that it can be “sandwiched” between c1g(n) and c2g(n), for sufficiently large n. Because (g(n)) is a set, we could write “ f (n) E (g(n))”
+to indicate that f (n) is a member of (g(n)). Instead, we will usually write
+“ f (n) = (g(n))” to express the same notion.
