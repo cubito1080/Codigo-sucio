@@ -42,7 +42,7 @@ to indicate that f (n) is a member of (g(n)). Instead, we will usually write
 
 
 
-![Some examples of theta notation in algorithms]([image.png](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GQYq1BpjrXDhmD18JXQSoku7AJpqGAxvOgJJX5dtQgr3p8_5))
+![Some examples of theta notation in algorithms](assets/alogritmos.PNG)
 
 
 
