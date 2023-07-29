@@ -61,6 +61,9 @@ We write f (n) = O(g(n)) to indicate that a function f (n) is a member of
 the set O(g(n)). Note that f (n) = (g(n)) implies f (n) = O(g(n)), since theta-
 notation is a stronger notion than O-notation.
 
+$$
+f(n) = O(g(n)) \text{ if there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \leq f(n) \leq cg(n) \text{ for all } n \geq n_0.
+$$
 
 
 ## Omega notation
