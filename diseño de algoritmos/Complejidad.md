@@ -46,7 +46,7 @@ to indicate that f (n) is a member of (g(n)). Instead, we will usually write
 ![Some examples of theta notation in algorithms](assets/alogritmos.PNG)
 
 
-## O-notation
+## Big-O notation
 
 
 Big O notation (O) is used to describe the asymptotic behavior of a function, and is often used in algorithm analysis to describe the worst-case or average-case running time. It provides an upper bound on the growth rate of a function, which can be used to describe the performance of an algorithm.
