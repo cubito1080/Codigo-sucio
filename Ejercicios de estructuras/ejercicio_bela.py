@@ -4,4 +4,4 @@ def reversa(cadena):
     else:
         return reversa(cadena[1:]) + cadena[0]
 
-print(reversa("Juan camilo david"))
+print(reversa("Juan Camilo David"))
