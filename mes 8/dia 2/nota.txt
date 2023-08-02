@@ -1,0 +1,4 @@
+se hace ejercicios de recursion-
+explica notacion asintotica
+
+ejercicios de recursion estan en carpeta ejercicio estructuras-
