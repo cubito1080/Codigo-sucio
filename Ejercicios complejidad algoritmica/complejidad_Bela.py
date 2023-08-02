@@ -5,7 +5,7 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]: #O(n**2)
                 arr[j], arr[j+1] = arr[j+1], arr[j] #O(n**2)
 
-# Ejemplo de uso:   2 O(1) + 3 O(n**2)
+# Ejemplo de uso:   2 O(1) + 2 O(n**2)
 
 lista = [64, 34, 25, 12, 22, 11, 90] # O(1)
 bubble_sort(lista)      
