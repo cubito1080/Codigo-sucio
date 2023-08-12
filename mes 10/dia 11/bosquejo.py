@@ -1,3 +1,6 @@
+import math
+
+
 class Matriz:
     def __init__(self, filas: int, columnas: int):
         if filas == columnas and filas % 2 != 0:
@@ -6,6 +9,14 @@ class Matriz:
             self.lista_columnas = [[0] * columnas for _ in range(filas)]
         else:
             raise ValueError("La matriz debe ser cuadrada e impar")
+
+
+        self.cuantas_derecha = math.ceil(self.filas/2)
+
+        self.cuantas_arriba = math.floor(self.filas/2)
+        self.cuantas_izquierda = math.floor(self.filas / 2)
+        self.cuantas_izquierda = math.floor(self.filas / 2)
+
 
     def agregar_numero(self, fila_objetivo: int, columna_objetivo: int, agregar_elemento: int):
         if 0 <= fila_objetivo < self.filas and 0 <= columna_objetivo < self.columnas:
@@ -19,9 +30,8 @@ class Matriz:
         centro_columna = self.columnas // 2
         return centro_fila, centro_columna
 
-    def calcular_rataciones_espirales(self):
+    def calcular_rotaciones_espirales(self):
         return self.filas // 2
-
 
     def girar_derecha(self, centro: list, numero_capa):
         centro = [self.filas][self.columnas + 1]
@@ -35,31 +45,28 @@ class Matriz:
     def girar_abajo(self, centro: list, numero):
         centro = [self.filas + 1][self.columnas]
 
+    def hallar_serie_izquierda_y_arriba(self):
+        serie_izquierda_y_arriba = []
+        contador = 2
+
+        for _ in range(self.filas - 1):
+            serie_izquierda_y_arriba.append(contador)
+            contador += 2
+
+        return serie_izquierda_y_arriba
 
 
-    def imprimir_espiral(self):
-        rotaciones = self.calcular_rataciones_espirales()
-        centro_fila, centro_columna = self.calcular_centro()
+    def hallar_serie_derecha_abajo(self):
+        serie_derecha_abajo = []
+        contador = 1
 
-        for _ in range(rotaciones):
-            # Imprimir hacia la derecha
-            for col in range(centro_columna, self.columnas - centro_columna):
-                print(self.lista_columnas[centro_fila][col])
+        for _ in range(self.filas - 1):
+            serie_derecha_abajo.append(contador)
+            contador += 2
 
-            # Imprimir hacia abajo
-            for row in range(centro_fila + 1, self.filas - centro_fila):
-                print(self.lista_columnas[row][self.columnas - centro_columna - 1])
+        return serie_derecha_abajo
 
-            # Imprimir hacia la izquierda
-            for col in range(self.columnas - centro_columna - 2, centro_columna - 1, -1):
-                print(self.lista_columnas[self.filas - centro_fila - 1][col])
 
-            # Imprimir hacia arriba
-            for row in range(self.filas - centro_fila - 2, centro_fila, -1):
-                print(self.lista_columnas[row][centro_columna])
-
-            centro_fila += 1
-            centro_columna += 1
 
 # Crear una matriz cuadrada impar de 5x5
 matriz = Matriz(5, 5)
