@@ -43,6 +43,7 @@ class Matriz: #O(n**2)   Ecuación de la clase: 4O(1) + O(n) + O(n**2)
         # 2 -> Izquierda
         elif codigo == 2: # O(1)
             return 0, -1 # O(1)
+        # arriba
         else:
             return -1, 0 # O(1)
 
