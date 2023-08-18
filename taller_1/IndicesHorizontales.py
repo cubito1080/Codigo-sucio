@@ -1,17 +1,18 @@
-def print_matrix_indices(matrix, row, col, n, m, direction):
-  if row >= n or col >= m:
+def print_matrix_indices(matrix, row_pointer, col_pointer, n, m, direction):
+  if row_pointer == n or col_pointer == m:
     return
-  print(f'[{row}, {col}]', end=' ')
+  print(f'[{row_pointer}, {col_pointer}]', end=' ')
   if direction == 'right':
-    if col + 1 < m:
-      print_matrix_indices(matrix, row, col + 1, n, m, direction)
+    if col_pointer + 1 < m:
+      print_matrix_indices(matrix,row_pointer, col_pointer + 1, n, m, "right")
     else:
-      print_matrix_indices(matrix, row + 1, col, n, m, 'left')
-  else:
-    if col - 1 >= 0:
-      print_matrix_indices(matrix, row, col - 1, n, m, direction)
+      print_matrix_indices(matrix, row_pointer + 1, col_pointer, n, m, 'left')
+
+  elif direction == "left":
+    if col_pointer - 1 >= 0:
+      print_matrix_indices(matrix, row_pointer, col_pointer - 1, n, m, "left")
     else:
-      print_matrix_indices(matrix, row + 1, col, n, m, 'right')
+      print_matrix_indices(matrix, row_pointer + 1, col_pointer, n, m, 'right')
 
 def show_matrix_indices(matrix):
   n = len(matrix)
