@@ -71,6 +71,7 @@ def resolver_sudoku(matriz_sudoku, resultado_suma):
 #     [8, 5, None],
 #     [None, 2, None]
 # ]
+# suma = 14
 sudoku = [
     [3, 6, 7],
     [None, 7, None],
