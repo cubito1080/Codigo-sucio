@@ -13,16 +13,20 @@ def imprimir_sudoku(matriz_sudoku):
 
 
 def validacion(matriz_sudoku, resultado_suma, i, j, numero_actual) -> bool:
-    elementos_fila = list(filter(lambda x: x is not None, matriz_sudoku[i]))
+    elementos_fila: List[int] = list(filter(lambda x: x is not None, matriz_sudoku[i]))
     elementos_columna: List[int] = [matriz_sudoku[index][j] for index in range(len(matriz_sudoku))
                                     if matriz_sudoku[index][j] is not None]
 
-    if len(elementos_fila) == len(matriz_sudoku) - 1 or len(elementos_columna) == len(matriz_sudoku) - 1:
+    if len(elementos_fila) == len(matriz_sudoku) - 1 and len(elementos_columna) == len(matriz_sudoku) - 1:
+        return numero_actual + sum(elementos_fila) == resultado_suma and \
+               numero_actual + sum(elementos_columna) == resultado_suma
+
+    elif len(elementos_fila) == len(matriz_sudoku) - 1 or len(elementos_columna) == len(matriz_sudoku) - 1:
         return numero_actual + sum(elementos_fila) == resultado_suma or \
                numero_actual + sum(elementos_columna) == resultado_suma
 
-    return numero_actual + sum(elementos_fila) > resultado_suma or \
-           numero_actual + sum(elementos_columna) > resultado_suma
+    return numero_actual + sum(elementos_fila) < resultado_suma or \
+           numero_actual + sum(elementos_columna) < resultado_suma
 
 
 def siguiente_llamado(matriz_sudoku, resultado_suma, i, j):
@@ -49,6 +53,8 @@ def sudoku_sumas(matriz_sudoku, resultado_suma: int, i: int = 0, j: int = 0):
         if validacion(matriz_sudoku, resultado_suma, i, j, numero_actual):
             matriz_sudoku[i][j] = numero_actual
             succes = siguiente_llamado(matriz_sudoku, resultado_suma, i, j)
+            if not succes:
+                matriz_sudoku[i][j] = None
 
         if numero_actual >= resultado_suma - 2 or succes:
             break
@@ -71,9 +77,17 @@ def resolver_sudoku(matriz_sudoku, resultado_suma):
 #     [8, 5, None],
 #     [None, 2, None]
 # ]
-# suma = 14
+# suma= 14
+
+# sudoku = [
+#     [3, 6, 7],
+#     [None, 7, None],
+#     [8, None, 5]
+# ]
+# suma = 16
+
 sudoku = [
-    [3, 6, 7],
+    [None, None, 7],
     [None, 7, None],
     [8, None, 5]
 ]
